@@ -1,9 +1,9 @@
 ShopifyApp::Engine.routes.draw do
   controller :sessions do
-    get 'login' => :new, :as => :login
-    post 'login' => :create, :as => :authenticate
-    get 'auth/shopify/callback' => :callback
-    get 'logout' => :destroy, :as => :logout
+    get '/shopify_modules/login' => :new, :as => :login
+    post '/shopify_modules/login' => :create, :as => :authenticate
+    get '/shopify_modules/auth/shopify/callback' => :callback
+    get '/shopify_modules/logout' => :destroy, :as => :logout
   end
 
   namespace :webhooks do
